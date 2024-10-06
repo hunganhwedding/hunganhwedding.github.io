@@ -1645,6 +1645,17 @@ a:focus {
   display: none;
 }
 
+#responsiveImage {
+  background-image: url('/images/hungtd/slide_w_1.jpg');
+}
+
+/* Mobile view */
+@media only screen and (max-width: 768px) {
+  #responsiveImage {
+    background-image: url('/images/hungtd/slide_w_1_mobile.jpg');
+  }
+}
+
 .hero .slide-item:before {
   content: "";
   background-color: rgba(0, 0, 0, 0.3);

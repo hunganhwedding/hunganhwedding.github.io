@@ -83,12 +83,13 @@
 
 
         <!-- start of hero -->
+        <!-- <img src="images/hungtd/slide_w_1.jpg"  class="slider-bg-x"> -->
         <section class="hero">
             <div class="hero-slider hero-slider-s1">
                 <div class="slide-item">
-                    <img src="images/hungtd/slide_w_1.jpg" alt class="slider-bg">
+                    <img id="responsiveImage" src="images/hungtd/slide_w_1.jpg" alt class="slider-bg">
                 </div>
-<!-- 
+<!--            
                 <div class="slide-item">
                     <img src="images/ours/s8.png" alt class="slider-bg">
                 </div>
@@ -231,7 +232,7 @@
                     <div class="col col-lg-10 col-lg-offset-1">
                         <div class="event">
                             <div class="img-holder">
-                                <img src="images/hungtd/hungtd-qr.png" width="120" alt class="img img-responsive">
+                                <img src="images/hungtd/hungtd-qr-2.png" width="120" alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Nhà Trai</h3>
@@ -255,7 +256,7 @@
                     <div class="col col-lg-10 col-lg-offset-1">
                         <div class="event">
                             <div class="img-holder">
-                                <img src="images/hungtd/hungtd-qr.png" width="120"  alt class="img img-responsive">
+                                <img src="images/hungtd/anh-qr.png" width="120"  alt class="img img-responsive">
                             </div>
                             <div class="details">
                                 <h3>Nhà Gái</h3>
@@ -451,11 +452,27 @@
     </div>
     <!-- end of page-wrapper -->
 
+    <script type="application/javascript">
+        function updateImageSrc() {
+            console.log('## updateImageSrc');
+          const image = document.getElementById('responsiveImage');
+          if (window.innerWidth <= 768) {
+            image.src = 'images/hungtd/slide_w_1_mobile.jpg';  // Mobile image
+          } else {
+            image.src = 'images/hungtd/slide_w_1.jpg';  // Desktop image
+          }
+        }
+      
+        // Call the function on page load and on window resize
+        window.onload = updateImageSrc;
+        window.onresize = updateImageSrc;
+      </script>
+
 
 
     <!-- All JavaScript files
     ================================================== -->
-    <script type="application/javascript">
+    <!-- <script type="application/javascript">
         // Find all YouTube videos
         var $allVideos = $("iframe[src^='//www.youtube.com']"),
 
@@ -490,7 +507,7 @@
             });
 
             // Kick off one resize to fix all videos on page load
-        }).resize();
+        }).resize(); -->
     </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
